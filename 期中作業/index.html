@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./fonts/all.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Russo+One&family=Zen+Kurenaido&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/animate.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="top_logo">
+      <div class="unit_left">
+        <div><i class="fas fa-phone-alt"></i></div>
+        <a href="#" class="phone">1-800-1234-567</a>
+      </div>
+      <a href="#"><img src="./images/logo-default-232x44.png"></a>
+      <a href="#" class="purchase">заказать</a>
+    </div>
+  </header>
+  <div class="nav_top_menu">
+    <ul class="menu_list">
+      <li><a href="#">ГЛАВНАЯ</a></li>
+      <li><a href="#">ОБО МНЕ</a></li>
+      <li id="li1">
+        <a id="a1" href="#" class="a_hover">УСЛУГИ<i id="i1" class="fas fa-chevron-down down"></i></a>
+        <ul class="ul_drop-down">
+          <li class="drop-down" id="dd1">Услуга</li>
+        </ul>
+      </li>
+      <li><a href="#">ГАЛЕРЕЯ</a></li>
+      <li><a href="#">КОНТАКТЫ</a></li>
+      <li id="li2"><a id="a2" href="#" class="a_hover">СТРАНИЦЫ<i id="i2" class="fas fa-chevron-down down"></i></a>
+      </li>
+      <li id="li3"><a id="a3" href="#" class="a_hover">ЭЛЕМЕНТЫ<i id="i3" class="fas fa-chevron-down down"></i></a>
+      </li>
+    </ul>
+  </div>
+  <section class="section">
+    <div id="p1">
+      <figure>
+        <img class="imgs" src="./images/services-01-480x659.jpg">
+      </figure>
+      <div id="b1">
+      </div>
+      <div class="caption">
+        <div class="title">Темная романтика</div>
+        <span class="price">От $50</span>
+        <hr class="divider">
+      </div>
+    </div>
+    <div id="p2">
+      <figure>
+        <img class="imgs" src="./images/services-02-480x659.jpg">
+      </figure>
+      <div id="b2">
+      </div>
+      <div class="caption">
+        <div class="title">Заметки души </div>
+        <span class="price">От $45</span>
+        <hr class="divider">
+      </div>
+    </div>
+    <div id="p3">
+      <figure>
+        <img class="imgs" src="./images/services-03-480x659.jpg">
+      </figure>
+      <div id="b3">
+      </div>
+      <div class="caption">
+        <div class="title">Апельсиновое<br>настроение</div>
+        <span class="price">От $35</span>
+        <hr class="divider">
+      </div>
+    </div>
+    <div id="p4">
+      <figure>
+        <img class="imgs" src="./images/services-04-480x659.jpg">
+      </figure>
+      <div id="b4">
+      </div>
+      <div class="caption">
+        <div class="title">В центре внимания</div>
+        <span class="price">От $40</span>
+        <hr class="divider">
+      </div>
+    </div>
+  </section>
+  <script src="/jquery-3.6.0.min.js"></script>
+  <script>
+    li1.onmouseover = () => {
+      i1.style.color = "#ff8820"
+      // dd1.style.display = "block"
+      // dd1.classList.remove("animate__fadeOutDown")
+      dd1.classList.add("focus")
+      // dd1.classList.remove("animate__delay-3s")
+      // dd1.classList.add("animate__animated")
+      // dd1.classList.add("animate__fadeInUp")
+    }
+    li1.onmouseleave = () => {
+      i1.style.color = "#9b9b9b"
+      // dd1.classList.remove("animate__fadeInUp")
+      // dd1.classList.add("animate__delay-3s")
+      // dd1.classList.add("animate__fadeOutDown")
+      dd1.classList.remove("focus")
+    }
+    li2.onmousemove = () => {
+      i2.style.color = "#ff8820"
+    }
+    li2.onmouseleave = () => {
+      i2.style.color = "#9b9b9b"
+    }
+    li3.onmousemove = () => {
+      i3.style.color = "#ff8820"
+    }
+    li3.onmouseleave = () => {
+      i3.style.color = "#9b9b9b"
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .a {
+      width: 100px;
+      height: 100px;
+      background: #564885;
+      position: relative;
+      transition: 200ms ease-in-out;
+    }
+
+    .b {
+      width: 100px;
+      height: 100px;
+      background: rgb(119, 43, 43);
+      visibility: hidden;
+      position: absolute;
+      top: 135px;
+      left: 0px;
+      transition-duration: 1s;
+      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      opacity: 0;
+    }
+
+    .a:hover {
+      background-color: orange;
+    }
+
+    .a:hover>.b {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-25px);
+    }
+
+    i {
+      text-transform:uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a" id="a">
+    <i>В центре внимания</i>
+    <div class="b" id="b"></div>
+  </div>
+  <script>
+    a.onmouseleave = () => {
+      b.style.transitionDelay = '1s'
+      b.style.transitionDuration = '0.3s'
+      a.style.transitionDelay = '1s'
+    }
+    a.onmousemove = () => {
+      b.style.transitionDelay = '0s'
+      b.style.transitionDuration = '1s'
+      a.style.transitionDelay = '0s'
+    }
+  </script>
+</body>
+
+</html>
