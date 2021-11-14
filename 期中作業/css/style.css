@@ -14,7 +14,8 @@ a {
 
 html,
 body {
-  height: 100vh;
+  /* 為了讓 Menu 的 position:sticky 可以下移，先取消此項設置 */
+  /* height: 100vh; */
 }
 
 body {
@@ -27,7 +28,7 @@ header {
 }
 
 .header {
-  border: 1px solid #222;
+  /* border: 1px solid #222; */
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -100,6 +101,8 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  box-shadow: 0 10px 22px -4px rgb(0 0 0 / 17%);
 }
 
 .nav_top_menu::before {
@@ -178,10 +181,10 @@ li.drop-down {
 
 /* --------------------------------圖片區---------------------------------- */
 
-.section {
+.content {
   background-color: black;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .imgs {
@@ -273,13 +276,12 @@ li.drop-down {
 /* --------------------------------------價位------------------------------------ */
 
 .caption {
-  /* background: rgba(255, 255, 255, 0.6); */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width:100%;
-  height: 20%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,24 +296,153 @@ li.drop-down {
   font-size: 2.2rem;
   letter-spacing: .05em;
   line-height: 1.2;
+  text-align: center;
 }
 
 .price {
-  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  /* font-family: "Poppins", Helvetica, Arial, sans-serif; */
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   margin-top: 5px;
   letter-spacing: 0.1em;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
 }
 
 .divider {
   /* display: block; */
-  margin-top: 10px;
+  margin-top: 15px;
   /* margin-bottom: 0; */
   width: 100%;
   max-width: 85px;
   background-color: #ff8820;
   border: none;
   height: 2px;
+}
+
+/* ------------------------------------- 人物 ----------------------------------------- */
+.person {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding-top: 95px;
+  padding-bottom: 110px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  padding-right: 100px;
+}
+
+#about {
+  text-align: left;
+  max-width: 45%;
+  margin-top: 50px;
+  /* margin-left: -10px; */
+}
+
+#about_title {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  word-spacing: 0.1em;
+  color: #151515;
+}
+
+#about_subtitle {
+  font-size: 18px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-right: 55px;
+  color: #151515;
+
+}
+
+#about_article {
+  margin-top: 20px;
+  margin-bottom: 0;
+  letter-spacing: 0.02em;
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 400px;
+  line-height: 1.71;
+  color: #9b9b9b;
+}
+
+.date {
+  transform: translateY(-10px);
+  margin-bottom: -10px;
+  margin-left: 0;
+  margin-top: 45px;
+  display: flex;
+}
+
+.wd,.hd {
+  display: flex;
+  margin-right: 20px;
+}
+
+.wd_words,.hd_words {
+  color: #ff8820;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-weight: 400px;
+  line-height:1.42;
+  font-size:14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wd_time,.hd_time {
+  color: #151515;
+  line-height:1.42;
+  font-weight: 400px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+#bg-smear {
+  position: relative;
+
+}
+
+#bg-smear > img{
+  vertical-align: middle;
+}
+
+#bg-smear::before{
+  content:"";
+  /* vertical-align: middle; */
+  background: url("../images/bg-02.png") no-repeat center/contain;
+  height: 636px;
+  width: 859px;
+  position:absolute;
+  bottom: 40px;
+  right: -180px;
+  z-index: -1;
+  transform: scale(1.35);
+}
+
+.order {
+  padding: 19px 65px;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 0;
+  border: 3px solid #ff8820;
+  background-color: transparent;
+  color: #151515;
+  /* a 元素(行內)無法使用內外邊距調整，須轉型 inline-block 方可使用 */
+  display: inline-block;
+  margin-top: 40px;
+  transition: 250ms all ease-in-out;
+}
+
+.order:hover {
+  background-color: #ff8820;
+  color:white;
+}
+
+.order > span {
+
 }
