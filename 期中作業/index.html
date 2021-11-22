@@ -18,7 +18,7 @@
 <body>
   <header class="header">
     <div class="top_logo">
-      <div class="unit_left">
+      <div class="unit_left_1">
         <div><i class="fas fa-phone-alt"></i></div>
         <a href="#" class="phone">1-800-1234-567</a>
       </div>
@@ -281,12 +281,93 @@
       <div class="footer_shell">
         <div class="contacts">
           <h3>Контакты</h3>
+          <ul>
+            <li>
+              <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+              <a class="contacts_text">
+                пр. Центральный, 253
+                <br>
+                Москва, Россия, 58275
+              </a>
+            </li>
+            <div class="line"></div>
+            <li>
+              <div class="icon"><i class="far fa-clock"></i></div>
+              <div class="contacts_text second">
+                Будние: <span>8:00–20:00</span>
+                <br>
+                Выходные: <span> 9:00–18:00</span>
+              </div>
+            </li>
+            <div class="line"></div>
+            <li>
+              <div class="icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contacts_text">
+                <a href="#" class="third">+1 (409) 987–5874</a>
+                <br>
+                <a href="#" class="third font_14">info@demolink.org</a>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="new">
           <h3>Последние публикации</h3>
+          <div class="new_row">
+            <div class="unit_left">
+              <a href="#">
+                <img src="./images/post-minimal-04-81x84.jpg" alt="">
+              </a>
+            </div>
+            <div class="unit_right">
+              <a href="#">Последние тренды в изобразительном искусстве: осень 2019</a>
+              <div class="time">
+                <div class="time_i"><i class="far fa-clock"></i></div>
+                <div class="time_d">Октябрь 12, 2019</div>
+              </div>
+            </div>
+          </div>
+          <div class="new_row">
+            <div class="unit_left">
+              <a href="#">
+                <img src="./images/post-minimal-05-81x84.jpg" alt="">
+              </a>
+            </div>
+            <div class="unit_right">
+              <a href="#">Основы изобразительного искусства: Техники, которые нужно освоить</a>
+              <div class="time">
+                <div class="time_i"><i class="far fa-clock"></i></div>
+                <div class="time_d">Октябрь 26, 2019</div>
+              </div>
+            </div>
+          </div>
+          <div class="new_row">
+            <div class="unit_left">
+              <a href="#">
+                <img src="./images/post-minimal-06-81x84.jpg" alt="">
+              </a>
+            </div>
+            <div class="unit_right">
+              <a href="#">Почему организация студии настолько важна</a>
+              <div class="time">
+                <div class="time_i"><i class="far fa-clock"></i></div>
+                <div class="time_d">Октябрь 23, 2019</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="write">
           <h3>Написать мне</h3>
+          <div>
+            <i class="fas fa-bars icon6"></i>
+            <div class="rs">
+              <div id="by" class="first">Выбрать Услугу<i id="down" class="fas fa-angle-down icon7"></i></div>
+              <div id="fdd" class="first_dd">
+                <div id="fdd1" class="fdd">Портреты</div>
+                <div id="fdd2" class="fdd">Абстракционизм</div>
+                <div id="fdd3" class="fdd">Поп-арт</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -336,7 +417,7 @@
         }
       }, 500)
     }
-    
+
     d1.onclick = () => {
       cc.style.marginRight = "0px"
       c1.style.visibility = "visible"
@@ -347,6 +428,25 @@
           c4.style.visibility = "hidden"
         }
       }, 500)
+    }
+
+    by.onclick = () => {
+      // fdd.style.display = "block"
+      if (fdd.style.display !== "block") {
+        fdd.style.display = "block"
+      } else {
+      fdd.style.display = "none"
+      }
+
+      if (down.classList.contains('fa-angle-down') == true) {
+        down.classList.toggle('fa-angle-up')
+      } else {
+        // down.classList.add('fa-angle-down')
+      }
+    }
+
+    fdd1.onclick = () => {
+      // by.innerText = ""
     }
   </script>
 </body>

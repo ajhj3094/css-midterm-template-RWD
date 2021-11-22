@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      display:none;
+    }
+
+    .box2 {
+      display:none;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked+div {
+      display:block;
+    }
+  </style>
+</head>
+<body>
+  <input type="radio" id="b1" name="x">
+  <div class="box1" >
+    <img src="./images/post-minimal-04-81x84.jpg" alt="">
+  </div>
+  <input type="radio" id="b2" name="x">
+  <div class="box2" >
+    <img src="./images/post-minimal-05-81x84.jpg" alt="">
+  </div>
+  <label for="b1">哈囉哈囉</label>
+  <br>
+  <label for="b2">嗨嗨嗨嗨</label>
+</body>
+</html>
