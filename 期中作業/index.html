@@ -358,7 +358,7 @@
         <div class="write">
           <h3>Написать мне</h3>
           <div>
-            <i class="fas fa-bars icon6"></i>
+            <i class="fas fa-bars"></i>
             <div class="rs">
               <div id="by" class="first">Выбрать Услугу<i id="down" class="fas fa-angle-down icon7"></i></div>
               <div id="fdd" class="first_dd">
@@ -368,10 +368,37 @@
               </div>
             </div>
           </div>
+          <div style="margin-top:16px;padding: 3px 0;">
+            <i class="fas fa-calendar-week"></i>
+            <div class="rs">
+              <div id="" class="first">Выбрать день</div>
+            </div>
+          </div>
+          <div style="margin-top:16px">
+            <i class="far fa-comment-alt" id="ix"></i>
+            <div class="rs">
+              <!-- <div id="" class="first">Сообщение</div> -->
+              <textarea class="third" placeholder="Сообщение" row="10"></textarea>
+            </div>
+          </div>
+          <a class="order2" href="#" style="margin-top:18px;color:white;"><span>отправить</span></a>
         </div>
       </div>
     </div>
-    <div class="footer_bottom"></div>
+    <div class="footer_bottom">
+      <div class="footer-container">
+        <div class="footer-left">
+          <span>Подписывайтесь:
+            <i class="fab fa-instagram ixx"></i>
+            <i class="fab fa-facebook-f ixx"></i>
+            <i class="fab fa-twitter ixx"></i>
+          </span>
+        </div>
+        <div class="footer-right">
+          <p>Жасмин Майлс © 2021. <a>Политика Конфиденциальности</a></p>
+        </div>
+      </div>
+    </div>
   </section>
 
 
@@ -379,18 +406,10 @@
   <script>
     li1.onmouseover = () => {
       i1.style.color = "#ff8820"
-      // dd1.style.display = "block"
-      // dd1.classList.remove("animate__fadeOutDown")
       dd1.classList.add("focus")
-      // dd1.classList.remove("animate__delay-3s")
-      // dd1.classList.add("animate__animated")
-      // dd1.classList.add("animate__fadeInUp")
     }
     li1.onmouseleave = () => {
       i1.style.color = "#9b9b9b"
-      // dd1.classList.remove("animate__fadeInUp")
-      // dd1.classList.add("animate__delay-3s")
-      // dd1.classList.add("animate__fadeOutDown")
       dd1.classList.remove("focus")
     }
     li2.onmousemove = () => {
@@ -435,7 +454,7 @@
       if (fdd.style.display !== "block") {
         fdd.style.display = "block"
       } else {
-      fdd.style.display = "none"
+        fdd.style.display = "none"
       }
 
       if (down.classList.contains('fa-angle-down') == true) {
