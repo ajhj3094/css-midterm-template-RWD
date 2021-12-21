@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CSS-Template-RWD</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./fonts/all.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700"> -->
@@ -426,27 +426,60 @@
     }
 
     d2.onclick = () => {
-      cc.style.marginRight = "1200px"
-      c3.style.visibility = "visible"
-      c4.style.visibility = "visible"
-      setTimeout(() => {
-        if (cc.style.marginRight === "1200px") {
-          c1.style.visibility = "hidden"
-          c2.style.visibility = "hidden"
-        }
-      }, 500)
+      if (window.innerWidth > 1200) {
+        cc.style.marginRight = "1200px"
+        c3.style.visibility = "visible"
+        c4.style.visibility = "visible"
+        setTimeout(() => {
+          if (cc.style.marginRight === "1200px") {
+            c1.style.visibility = "hidden"
+            c2.style.visibility = "hidden"
+          }
+        }, 500)
+      }
+      if (window.innerWidth > 992) {
+        cc.style.marginRight = "1170px"
+        cc.style.marginLeft = "-770px"
+        // margin-left: -770px
+        c3.style.visibility = "visible"
+        c4.style.visibility = "visible"
+        setTimeout(() => {
+          if (cc.style.marginRight === "960px") {
+            c1.style.visibility = "hidden"
+            c2.style.visibility = "hidden"
+          }
+        }, 500)
+      }
     }
 
     d1.onclick = () => {
-      cc.style.marginRight = "0px"
-      c1.style.visibility = "visible"
-      c2.style.visibility = "visible"
-      setTimeout(() => {
-        if (cc.style.marginRight === "0px") {
-          c3.style.visibility = "hidden"
-          c4.style.visibility = "hidden"
+      console.log(window.innerWidth)
+      if (window.innerWidth > 1200) {
+        cc.style.marginRight = "0px"
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+        setTimeout(() => {
+          if (cc.style.marginRight === "0px") {
+            c3.style.visibility = "hidden"
+            c4.style.visibility = "hidden"
+          }
+        }, 500)
+      }
+      if (window.innerWidth > 992) {
+        if (cc.style.marginRight === "1150px") {
+          // cc.style.marginRight = "0px"
+          cc.style.marginLeft = "539px"
+          c1.style.visibility = "visible"
+          c2.style.visibility = "visible"
         }
-      }, 500)
+        // cc.style.marginRight = "800px"
+        setTimeout(() => {
+          if (cc.style.marginLeft === "539px") {
+            c3.style.visibility = "hidden"
+            c4.style.visibility = "hidden"
+          }
+        }, 0)
+      }
     }
 
     by.onclick = () => {

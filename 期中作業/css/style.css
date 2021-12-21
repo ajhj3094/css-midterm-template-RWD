@@ -205,6 +205,7 @@ li.drop-down {
   transition: all 250ms ease-in;
   position: relative;
   overflow: hidden;
+  cursor:pointer;
 }
 
 #p1:hover img,
@@ -256,14 +257,14 @@ li.drop-down {
   border-right: 1px solid rgba(255, 255, 255, 0.6);
   transform: scale3d(1, 0, 1);
 }
-#b1:hover::before,
-#b1:hover::after,
-#b2:hover::before,
-#b2:hover::after,
-#b3:hover::before,
-#b3:hover::after,
-#b4:hover::before,
-#b4:hover::after {
+#p1:hover>#b1::before,
+#p1:hover>#b1::after,
+#p2:hover>#b2::before,
+#p2:hover>#b2::after,
+#p3:hover>#b3::before,
+#p3:hover>#b3::after,
+#p4:hover>#b4::before,
+#p4:hover>#b4::after {
   transform: scale3d(1, 1, 1);
   transition: transform 250ms;
 }
@@ -645,6 +646,7 @@ video {
   background-color: #fff;
   position: relative;
   left: 50%;
+  transition:all 0.5s ease 0s;
   /* transform: translateX(-50%); */
 }
 
@@ -1083,12 +1085,14 @@ textarea:focus {
 
 .ixx:hover {
   color: white;
+  cursor: pointer;
 }
 
 .footer-right>p>a {
   text-decoration: underline;
   word-spacing: 5px;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .footer-right>p>a:hover {
@@ -1151,7 +1155,7 @@ textarea:focus {
     left:480px;
   }
   .dots {
-    display: none;
+    /* display: none; */
   }
   .p_box td:nth-child(1) {
     padding-right: 100px;
