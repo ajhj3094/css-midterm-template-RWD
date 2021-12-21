@@ -33,14 +33,45 @@
       <li id="li1">
         <a id="a1" href="#" class="a_hover">УСЛУГИ<i id="i1" class="fas fa-chevron-down down"></i></a>
         <ul class="ul_drop-down">
-          <li class="drop-down" id="dd1">Услуга</li>
+          <li class="drop-down" id="dd1"><i class="fas fa-angle-right i-right"></i>Услуга</li>
         </ul>
       </li>
       <li><a href="#">ГАЛЕРЕЯ</a></li>
       <li><a href="#">КОНТАКТЫ</a></li>
-      <li id="li2"><a id="a2" href="#" class="a_hover">СТРАНИЦЫ<i id="i2" class="fas fa-chevron-down down"></i></a>
+      <li id="li2">
+        <a id="a2" href="#" class="a_hover">СТРАНИЦЫ<i id="i2" class="fas fa-chevron-down down"></i></a>
+        <ul>СТРАНИЦЫ 1
+          <li><i class="fas fa-angle-right"></i>Команда</li>
+          <li><i class="fas fa-angle-right"></i>Профиль Сотрудника</li>
+          <li><i class="fas fa-angle-right"></i>Страница 404</li>
+          <li><i class="fas fa-angle-right"></i>Страница 503</li>
+          <li><i class="fas fa-angle-right"></i>Страница на обслуживании</li>
+          <li><i class="fas fa-angle-right"></i>Вопросы</li>
+        </ul>
+        <ul>СТРАНИЦЫ 2
+          <li><i class="fas fa-angle-right"></i>Политика Конфиденциальности</li>
+          <li><i class="fas fa-angle-right"></i>Результаты поиска</li>
+          <li><i class="fas fa-angle-right"></i>Карьера</li>
+          <li><i class="fas fa-angle-right"></i>Специальные предложения</li>
+          <li><i class="fas fa-angle-right"></i>Блог</li>
+          <li><i class="fas fa-angle-right"></i>Пост Блога</li>
+        </ul>
       </li>
-      <li id="li3"><a id="a3" href="#" class="a_hover">ЭЛЕМЕНТЫ<i id="i3" class="fas fa-chevron-down down"></i></a>
+      <li id="li3">
+        <a id="a3" href="#" class="a_hover">ЭЛЕМЕНТЫ<i id="i3" class="fas fa-chevron-down down"></i></a>
+        <ul>ЭЛЕМЕНТЫ 1
+          <li><i class="fas fa-angle-right"></i>Отзывы</li>
+          <li><i class="fas fa-angle-right"></i>Результаты поиска</li>
+          <li><i class="fas fa-angle-right"></i>Слайдеры</li>
+          <li><i class="fas fa-angle-right"></i>Хедеры</li>
+          <li><i class="fas fa-angle-right"></i>Футеры</li>
+        </ul>
+        <ul>ЭЛЕМЕНТЫ 2
+          <li><i class="fas fa-angle-right"></i>Формы</li>
+          <li><i class="fas fa-angle-right"></i>Галереи</li>
+          <li><i class="fas fa-angle-right"></i>Линии прогресса, Счетчики</li>
+          <li><i class="fas fa-angle-right"></i>Вкладки и аккордеоны</li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -407,10 +438,13 @@
     li1.onmouseover = () => {
       i1.style.color = "#ff8820"
       dd1.classList.add("focus")
+      // setTimeout(delay, 3000)
     }
     li1.onmouseleave = () => {
       i1.style.color = "#9b9b9b"
-      dd1.classList.remove("focus")
+      // let delay = setTimeout(() => {
+        dd1.classList.remove("focus")
+      // },1000)
     }
     li2.onmousemove = () => {
       i2.style.color = "#ff8820"
@@ -425,35 +459,54 @@
       i3.style.color = "#9b9b9b"
     }
 
+
+    window.onresize = start
+    function start() {
+      if (window.innerWidth > 1200) {
+        cc.style.marginRight = "0px"
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+        cc.style.marginLeft = "0px"
+      }
+      setTimeout(() => {
+          if (cc.style.marginRight === "0px") {
+            c3.style.visibility = "hidden"
+            c4.style.visibility = "hidden"
+          }
+        }, 0)
+    }
+    start()
+
     d2.onclick = () => {
       if (window.innerWidth > 1200) {
-        cc.style.marginRight = "1200px"
+        cc.style.marginRight = "1170px"
+        cc.style.marginLeft = "0px"
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
         setTimeout(() => {
-          if (cc.style.marginRight === "1200px") {
+          if (cc.style.marginRight === "1170px") {
             c1.style.visibility = "hidden"
             c2.style.visibility = "hidden"
           }
-        }, 500)
+        }, 0)
       }
-      if (window.innerWidth > 992) {
-        cc.style.marginRight = "1170px"
+      if (window.innerWidth > 992 && window.innerWidth <= 1200) {
+        cc.style.marginRight = "1150px"
         cc.style.marginLeft = "-770px"
         // margin-left: -770px
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
         setTimeout(() => {
-          if (cc.style.marginRight === "960px") {
+          if (cc.style.marginRight === "1150px") {
             c1.style.visibility = "hidden"
             c2.style.visibility = "hidden"
           }
-        }, 500)
+        }, 0)
       }
     }
 
     d1.onclick = () => {
-      console.log(window.innerWidth)
+      console.log(window.onresize)
       if (window.innerWidth > 1200) {
         cc.style.marginRight = "0px"
         c1.style.visibility = "visible"
@@ -463,18 +516,18 @@
             c3.style.visibility = "hidden"
             c4.style.visibility = "hidden"
           }
-        }, 500)
+        }, 0)
       }
-      if (window.innerWidth > 992) {
+      if (window.innerWidth > 992 && window.innerWidth <= 1200) {
         if (cc.style.marginRight === "1150px") {
-          // cc.style.marginRight = "0px"
-          cc.style.marginLeft = "539px"
+          cc.style.marginRight = "0px"
+          cc.style.marginLeft = "0px"
           c1.style.visibility = "visible"
           c2.style.visibility = "visible"
         }
         // cc.style.marginRight = "800px"
         setTimeout(() => {
-          if (cc.style.marginLeft === "539px") {
+          if (cc.style.marginLeft === "0px") {
             c3.style.visibility = "hidden"
             c4.style.visibility = "hidden"
           }

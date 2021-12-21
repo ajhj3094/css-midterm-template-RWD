@@ -164,18 +164,49 @@ a:hover {
   color: #ff8820;
 }
 
-li.drop-down {
+.ul_drop-down {
+  /* transition: .5s; */
+}
+
+li.drop-down#dd1 {
   width: 270px;
+  color: #1b1b1b;
   background: #fff;
   position: absolute;
-  top: 55px;
+  top: 65px;
   padding: 22px;
+  visibility: hidden;
+  transition: .5s;
+  cursor: pointer;
+}
+
+li.drop-down#dd1:hover,
+li.drop-down#dd1:hover > .i-right {
+  color: #ff8820;
+  display: inline-block;
+
+}
+
+li.drop-down#dd1:hover > .i-right {
+  transition: .2s;
+  margin-left: .5rem;
+  visibility: visible;
+}
+
+i.i-right {
+  color: #1b1b1b;
+  transition: .2s;
+  font-size:.8rem;
+  margin-left: .3rem;
+  /* display: none; */
   visibility: hidden;
 }
 
 .focus {
   visibility: visible !important;
   opacity: 1;
+  top: 55px !important;
+  visibility: visible !important;
 }
 
 .pointer {
