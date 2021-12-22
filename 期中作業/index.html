@@ -18,60 +18,84 @@
 <body>
   <header class="header">
     <div class="top_logo">
+      <label for="ham" class="ham_label"><i class="fas fa-bars hamb"></i></label>
       <div class="unit_left_1">
         <div><i class="fas fa-phone-alt"></i></div>
         <a href="#" class="phone">1-800-1234-567</a>
       </div>
-      <a href="#"><img src="./images/logo-default-232x44.png"></a>
+      <a href="#" class="logo"><img id="imgxx" src="./images/logo-default-232x44.png"></a>
       <a href="#" class="purchase">заказать</a>
+      <label for="more" class="more"><i class="fas fa-ellipsis-v more-icon"></i></label>
+      <input type="checkbox" name="topcheck" id="more">
+      <div class="more-detail">
+        <div class="unit_left_2">
+          <div><i class="fas fa-phone-alt"></i></div>
+          <a href="#" class="phone">1-800-1234-567</a>
+        </div>
+        <a href="#" class="purchase2">заказать</a>
+      </div>
     </div>
+
   </header>
+  <input type="checkbox" name="topcheck" id="ham">
   <div class="nav_top_menu">
-    <ul class="menu_list">
-      <li><a href="#">ГЛАВНАЯ</a></li>
+    <ul class="menu_list" id="menu">
+      <li id="fir"><a href="#">ГЛАВНАЯ</a></li>
       <li><a href="#">ОБО МНЕ</a></li>
       <li id="li1">
-        <a id="a1" href="#" class="a_hover">УСЛУГИ<i id="i1" class="fas fa-chevron-down down"></i></a>
-        <ul class="ul_drop-down">
+        <a id="a1" class="a_hover">УСЛУГИ<i id="i1" class="fas fa-chevron-down down"></i></a>
+        <ul id="ctt1" class="ul_drop-down" style="display: none">
           <li class="drop-down" id="dd1"><i class="fas fa-angle-right i-right"></i>Услуга</li>
         </ul>
       </li>
       <li><a href="#">ГАЛЕРЕЯ</a></li>
       <li><a href="#">КОНТАКТЫ</a></li>
       <li id="li2">
-        <a id="a2" href="#" class="a_hover">СТРАНИЦЫ<i id="i2" class="fas fa-chevron-down down"></i></a>
-        <ul>СТРАНИЦЫ 1
-          <li><i class="fas fa-angle-right"></i>Команда</li>
-          <li><i class="fas fa-angle-right"></i>Профиль Сотрудника</li>
-          <li><i class="fas fa-angle-right"></i>Страница 404</li>
-          <li><i class="fas fa-angle-right"></i>Страница 503</li>
-          <li><i class="fas fa-angle-right"></i>Страница на обслуживании</li>
-          <li><i class="fas fa-angle-right"></i>Вопросы</li>
-        </ul>
-        <ul>СТРАНИЦЫ 2
-          <li><i class="fas fa-angle-right"></i>Политика Конфиденциальности</li>
-          <li><i class="fas fa-angle-right"></i>Результаты поиска</li>
-          <li><i class="fas fa-angle-right"></i>Карьера</li>
-          <li><i class="fas fa-angle-right"></i>Специальные предложения</li>
-          <li><i class="fas fa-angle-right"></i>Блог</li>
-          <li><i class="fas fa-angle-right"></i>Пост Блога</li>
-        </ul>
+        <a id="a2" class="a_hover">СТРАНИЦЫ<i id="i2" class="fas fa-chevron-down down"></i></a>
+        <div class="ct1ct2" id="ctt2" style="display: none">
+          <div class="box66">
+            <ul class="ct1">СТРАНИЦЫ 1
+              <hr>
+              <li><i class="fas fa-angle-right"></i>Команда</li>
+              <li><i class="fas fa-angle-right"></i>Профиль Сотрудника</li>
+              <li><i class="fas fa-angle-right"></i>Страница 404</li>
+              <li><i class="fas fa-angle-right"></i>Страница 503</li>
+              <li><i class="fas fa-angle-right"></i>Страница на обслуживании</li>
+              <li><i class="fas fa-angle-right"></i>Вопросы</li>
+            </ul>
+            <ul class="ct1">СТРАНИЦЫ 2
+              <hr>
+              <li><i class="fas fa-angle-right"></i>Политика Конфиденциальности</li>
+              <li><i class="fas fa-angle-right"></i>Результаты поиска</li>
+              <li><i class="fas fa-angle-right"></i>Карьера</li>
+              <li><i class="fas fa-angle-right"></i>Специальные предложения</li>
+              <li><i class="fas fa-angle-right"></i>Блог</li>
+              <li><i class="fas fa-angle-right"></i>Пост Блога</li>
+            </ul>
+          </div>
+        </div>
       </li>
       <li id="li3">
-        <a id="a3" href="#" class="a_hover">ЭЛЕМЕНТЫ<i id="i3" class="fas fa-chevron-down down"></i></a>
-        <ul>ЭЛЕМЕНТЫ 1
-          <li><i class="fas fa-angle-right"></i>Отзывы</li>
-          <li><i class="fas fa-angle-right"></i>Результаты поиска</li>
-          <li><i class="fas fa-angle-right"></i>Слайдеры</li>
-          <li><i class="fas fa-angle-right"></i>Хедеры</li>
-          <li><i class="fas fa-angle-right"></i>Футеры</li>
-        </ul>
-        <ul>ЭЛЕМЕНТЫ 2
-          <li><i class="fas fa-angle-right"></i>Формы</li>
-          <li><i class="fas fa-angle-right"></i>Галереи</li>
-          <li><i class="fas fa-angle-right"></i>Линии прогресса, Счетчики</li>
-          <li><i class="fas fa-angle-right"></i>Вкладки и аккордеоны</li>
-        </ul>
+        <a id="a3" class="a_hover">ЭЛЕМЕНТЫ<i id="i3" class="fas fa-chevron-down down"></i></a>
+        <div class="ct1ct2" id="ctt3" style="height: 320px;display: none;">
+          <div class="box66">
+            <ul class="ct1">ЭЛЕМЕНТЫ 1
+              <hr>
+              <li><i class="fas fa-angle-right"></i>Отзывы</li>
+              <li><i class="fas fa-angle-right"></i>Результаты поиска</li>
+              <li><i class="fas fa-angle-right"></i>Слайдеры</li>
+              <li><i class="fas fa-angle-right"></i>Хедеры</li>
+              <li><i class="fas fa-angle-right"></i>Футеры</li>
+            </ul>
+            <ul class="ct1">ЭЛЕМЕНТЫ 2
+              <hr>
+              <li><i class="fas fa-angle-right"></i>Формы</li>
+              <li><i class="fas fa-angle-right"></i>Галереи</li>
+              <li><i class="fas fa-angle-right"></i>Линии прогресса, Счетчики</li>
+              <li><i class="fas fa-angle-right"></i>Вкладки и аккордеоны</li>
+            </ul>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
@@ -435,30 +459,49 @@
 
   <script src="/jquery-3.6.0.min.js"></script>
   <script>
-    li1.onmouseover = () => {
-      i1.style.color = "#ff8820"
-      dd1.classList.add("focus")
-      // setTimeout(delay, 3000)
+    a1.onclick = () => {
+      if (ctt1.style.display === "none") {
+        ctt1.style.display = "block"
+      } else {
+        ctt1.style.display = "none"
+      }
+      if (ctt2.style.display === "block" || ctt3.style.display === "block") {
+        ctt2.style.display = "none"
+        ctt3.style.display = "none"
+      }
     }
-    li1.onmouseleave = () => {
-      i1.style.color = "#9b9b9b"
-      // let delay = setTimeout(() => {
-        dd1.classList.remove("focus")
-      // },1000)
+    a2.onclick = () => {
+      if (ctt2.style.display === "none") {
+        ctt2.style.display = "block"
+      } else {
+        ctt2.style.display = "none"
+      }
+      if (ctt1.style.display === "block" || ctt3.style.display === "block") {
+        ctt1.style.display = "none"
+        ctt3.style.display = "none"
+      }
     }
-    li2.onmousemove = () => {
-      i2.style.color = "#ff8820"
+    a3.onclick = () => {
+      if (ctt3.style.display === "none") {
+        ctt3.style.display = "block"
+      } else {
+        ctt3.style.display = "none"
+      }
+      if (ctt2.style.display === "block" || ctt1.style.display === "block") {
+        ctt2.style.display = "none"
+        ctt1.style.display = "none"
+      }
     }
-    li2.onmouseleave = () => {
-      i2.style.color = "#9b9b9b"
+    
+    function md() {
+      console.log(window.innerWidth)
+      if (window.innerWidth >= 992) {
+        ctt1.style.display = "block"
+        ctt2.style.display = "block"
+        ctt3.style.display = "block"
+      }
     }
-    li3.onmousemove = () => {
-      i3.style.color = "#ff8820"
-    }
-    li3.onmouseleave = () => {
-      i3.style.color = "#9b9b9b"
-    }
-
+    md()
 
     window.onresize = start
     function start() {
@@ -468,12 +511,22 @@
         c2.style.visibility = "visible"
         cc.style.marginLeft = "0px"
       }
+
       setTimeout(() => {
-          if (cc.style.marginRight === "0px") {
-            c3.style.visibility = "hidden"
-            c4.style.visibility = "hidden"
-          }
-        }, 0)
+        if (cc.style.marginRight === "0px") {
+          c3.style.visibility = "hidden"
+          c4.style.visibility = "hidden"
+        }
+      }, 0)
+      if (window.innerWidth >= 992) {
+        ctt1.style.display = "block"
+        ctt2.style.display = "block"
+        ctt3.style.display = "block"
+      } else {
+        ctt1.style.display = "none"
+        ctt2.style.display = "none"
+        ctt3.style.display = "none"
+      }
     }
     start()
 
@@ -548,10 +601,6 @@
       } else {
         // down.classList.add('fa-angle-down')
       }
-    }
-
-    fdd1.onclick = () => {
-      // by.innerText = ""
     }
   </script>
 </body>

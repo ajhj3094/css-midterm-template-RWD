@@ -39,23 +39,34 @@
     }
 
     i {
-      text-transform:uppercase;
+      text-transform: uppercase;
+    }
+
+    .l:focus>.p {
+      color: green;
     }
   </style>
 </head>
 
 <body>
+  <span id=”yes”>請改變瀏覽器視窗大小</span>
   <input type="checkbox" name="66" id="" checked>
   <input type="checkbox" name="66" id="" checked>
+  <input type="radio" name="3" id="">
+  <input type="radio" name="3" id="">
+  <input type="radio" name="3" id="">
   <div class="a" id="a">
     <i>В центре внимания</i>
     <div class="b" id="b"></div>
   </div>
-  <ul>哈囉
+  <ul class="l">哈囉
     <hr>
-    <li>嗨</li>
+    <li class="p">嗨</li>
   </ul>
   <script>
+    window.onresize = function () {
+      console.log(window.innerWidth, document.documentElement.clientHeight)
+    }
     a.onmouseleave = () => {
       b.style.transitionDelay = '1s'
       b.style.transitionDuration = '0.3s'
