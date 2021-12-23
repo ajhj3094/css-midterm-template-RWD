@@ -460,39 +460,45 @@
   <script src="/jquery-3.6.0.min.js"></script>
   <script>
     a1.onclick = () => {
-      if (ctt1.style.display === "none") {
-        ctt1.style.display = "block"
-      } else {
-        ctt1.style.display = "none"
-      }
-      if (ctt2.style.display === "block" || ctt3.style.display === "block") {
-        ctt2.style.display = "none"
-        ctt3.style.display = "none"
+      if (window.innerWidth < 992) {
+        if (ctt1.style.display === "none") {
+          ctt1.style.display = "block"
+        } else {
+          ctt1.style.display = "none"
+        }
+        if (ctt2.style.display === "block" || ctt3.style.display === "block") {
+          ctt2.style.display = "none"
+          ctt3.style.display = "none"
+        }
       }
     }
     a2.onclick = () => {
-      if (ctt2.style.display === "none") {
-        ctt2.style.display = "block"
-      } else {
-        ctt2.style.display = "none"
-      }
-      if (ctt1.style.display === "block" || ctt3.style.display === "block") {
-        ctt1.style.display = "none"
-        ctt3.style.display = "none"
+      if (window.innerWidth < 992) {
+        if (ctt2.style.display === "none") {
+          ctt2.style.display = "block"
+        } else {
+          ctt2.style.display = "none"
+        }
+        if (ctt1.style.display === "block" || ctt3.style.display === "block") {
+          ctt1.style.display = "none"
+          ctt3.style.display = "none"
+        }
       }
     }
     a3.onclick = () => {
-      if (ctt3.style.display === "none") {
-        ctt3.style.display = "block"
-      } else {
-        ctt3.style.display = "none"
-      }
-      if (ctt2.style.display === "block" || ctt1.style.display === "block") {
-        ctt2.style.display = "none"
-        ctt1.style.display = "none"
+      if (window.innerWidth < 992) {
+        if (ctt3.style.display === "none") {
+          ctt3.style.display = "block"
+        } else {
+          ctt3.style.display = "none"
+        }
+        if (ctt2.style.display === "block" || ctt1.style.display === "block") {
+          ctt2.style.display = "none"
+          ctt1.style.display = "none"
+        }
       }
     }
-    
+
     function md() {
       console.log(window.innerWidth)
       if (window.innerWidth >= 992) {
@@ -500,6 +506,41 @@
         ctt2.style.display = "block"
         ctt3.style.display = "block"
       }
+      // if (window.innerWidth < 992) {
+      //   a1.onclick = () => {
+      //     if (ctt1.style.display === "none") {
+      //       ctt1.style.display = "block"
+      //     } else {
+      //       ctt1.style.display = "none"
+      //     }
+      //     if (ctt2.style.display === "block" || ctt3.style.display === "block") {
+      //       ctt2.style.display = "none"
+      //       ctt3.style.display = "none"
+      //     }
+      //   }
+      //   a2.onclick = () => {
+      //     if (ctt2.style.display === "none") {
+      //       ctt2.style.display = "block"
+      //     } else {
+      //       ctt2.style.display = "none"
+      //     }
+      //     if (ctt1.style.display === "block" || ctt3.style.display === "block") {
+      //       ctt1.style.display = "none"
+      //       ctt3.style.display = "none"
+      //     }
+      //   }
+      //   a3.onclick = () => {
+      //     if (ctt3.style.display === "none") {
+      //       ctt3.style.display = "block"
+      //     } else {
+      //       ctt3.style.display = "none"
+      //     }
+      //     if (ctt2.style.display === "block" || ctt1.style.display === "block") {
+      //       ctt2.style.display = "none"
+      //       ctt1.style.display = "none"
+      //     }
+      //   }
+      // }
     }
     md()
 
