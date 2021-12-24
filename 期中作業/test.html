@@ -45,12 +45,23 @@
     .l:focus>.p {
       color: green;
     }
+    textarea {
+      /* width: 300px; */
+      /* width: 20vw; */
+      /* width: calc(20vw + 30vh); */
+      width: calc(100px + 30vw);
+      /* width: 30vh; */
+      /* height: 300px; */
+      /* width: calc(300px + 20vw); */
+      /* width: calc(20vw + 300px); */
+    }
   </style>
 </head>
 
 <body>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
   <span id=”yes”>請改變瀏覽器視窗大小</span>
-  <input type="checkbox" name="66" id="" checked>
+  <input type="checkbox" name="66" id="aaa">
   <input type="checkbox" name="66" id="" checked>
   <input type="radio" name="3" id="">
   <input type="radio" name="3" id="">
@@ -77,6 +88,14 @@
       b.style.transitionDuration = '1s'
       a.style.transitionDelay = '0s'
     }
+
+    const check = document.querySelector('#aaa').checked = true
+    const nav = ''
+    document.addEventListener('click', (e) => {
+      if(e.target !== nav){
+        // 消失 navbar
+      }
+    })
   </script>
 </body>
 

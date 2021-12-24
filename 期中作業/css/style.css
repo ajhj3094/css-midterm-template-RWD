@@ -1169,6 +1169,11 @@ video {
 .write {
   font-size: 14px;
   font-weight: 400;
+  /* width: 450px; */
+  padding: 0;
+}
+.footer_body .footer_shell .write {
+  padding: 0;
 }
 
 .write > div {
@@ -1176,11 +1181,13 @@ video {
   align-items: center;
   margin-top: 30px;
   background-color: #4d4d4d;
+  width: inherit;
 }
 
 .write > div > div {
   display: flex;
   align-items: center;
+  width: inherit;
 }
 
 .write i {
@@ -1193,6 +1200,7 @@ video {
   cursor: pointer;
   padding: 18px 0px;
   align-items: center;
+  margin-right: auto;
 }
 
 .rs {
@@ -1203,7 +1211,8 @@ video {
   position: absolute;
   top: 55px;
   right: 0px;
-  width: 438px;
+  /* width: 438px; */
+  width: inherit;
   border: 3px solid #fff;
   outline: 1px solid #ff8820;
   display: none;
@@ -1376,8 +1385,8 @@ textarea:focus {
     width: 300px;
   }
   .first_dd {
-    width: 268px;
-    right: 1px;
+    /* width: 268px;
+    right: 1px; */
     top: 55px;
   }
   .write > div > div > div > i {
@@ -1433,6 +1442,12 @@ textarea:focus {
 }
 
 @media (max-width: 992px) {
+  #ctt3 {
+    height: 650px;
+  }
+  #li3 {
+    /* height: 30px; */
+  }
   .p_box td:nth-child(1) {
     padding-right: 160px;
   }
@@ -1447,7 +1462,7 @@ textarea:focus {
     width: 520px;
   }
   .first_dd {
-    width: 585px;
+    /* width: 585px; */
   }
   .write > div > div > div > i {
     padding-left: 380px;
@@ -1457,13 +1472,15 @@ textarea:focus {
     /* margin-right: 90px; */
     margin-right: 135px;
     /* margin-left: 120px; */
+    padding: 0;
+    margin-left: 30px;
   }
   .footer-right {
     width: 230px;
     text-align: end;
   }
   .footer_shell h3 {
-    width: 205px;
+    width: 220px;
   }
   .footer_shell > div:nth-child(1) {
     margin-right: 90px;
@@ -1545,7 +1562,7 @@ textarea:focus {
   #ctt3 {
     display: none;
     margin-left: 0;
-    height: 500px;
+    /* height: 500px; */
   }
   #ctt2 {
     display: none;
@@ -1771,9 +1788,10 @@ textarea:focus {
     flex-direction: column;
     width: inherit;
     align-items: flex-start;
-    height: 125vh;
+    /* height: 125vh; */
     justify-content: stretch;
     /* overflow:auto; */
+    margin-bottom: 160px;
   }
   #ham:checked + .nav_top_menu {
     margin-left: 0px;
@@ -1949,10 +1967,14 @@ textarea:focus {
   width: 300px;
 }
 .first_dd {
-  width: 467px;
+  /* width: 467px; */
   right: 0;
+}
+.footer_body .footer_shell .write {
+  margin-left: 0;
 }
 }
 
 @media (max-width: 576px) {
+
 }
