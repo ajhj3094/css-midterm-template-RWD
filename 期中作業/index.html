@@ -8,11 +8,15 @@
   <title>CSS-Template-RWD</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./fonts/all.min.css">
+  <!-- <link rel="stylesheet" href="css/animate.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700"> -->
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -99,60 +103,61 @@
       </li>
     </ul>
   </div>
-  <section class="content">
-    <div id="p1">
-      <figure>
-        <img class="imgs" src="./images/services-01-480x659.jpg">
-      </figure>
-      <div id="b1">
+  <section class="content swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div id="p1" class="swiper-slide">
+        <figure>
+          <img class="imgs" src="./images/services-01-480x659.jpg">
+        </figure>
+        <div id="b1">
+        </div>
+        <div class="caption">
+          <div class="title">Темная романтика</div>
+          <span class="price">От $50</span>
+          <hr class="divider">
+        </div>
       </div>
-      <div class="caption">
-        <div class="title">Темная романтика</div>
-        <span class="price">От $50</span>
-        <hr class="divider">
+      <div id="p2" class="swiper-slide">
+        <figure>
+          <img class="imgs" src="./images/services-02-480x659.jpg">
+        </figure>
+        <div id="b2">
+        </div>
+        <div class="caption">
+          <div class="title">Заметки души </div>
+          <span class="price">От $45</span>
+          <hr class="divider">
+        </div>
+      </div>
+      <div id="p3" class="swiper-slide">
+        <figure>
+          <img class="imgs" src="./images/services-03-480x659.jpg">
+        </figure>
+        <div id="b3">
+        </div>
+        <div class="caption">
+          <div class="title">Апельсиновое<br>настроение</div>
+          <span class="price">От $35</span>
+          <hr class="divider">
+        </div>
+      </div>
+      <div id="p4" class="swiper-slide">
+        <figure>
+          <img class="imgs" src="./images/services-04-480x659.jpg">
+        </figure>
+        <div id="b4">
+        </div>
+        <div class="caption">
+          <div class="title">В центре внимания</div>
+          <span class="price">От $40</span>
+          <hr class="divider">
+        </div>
       </div>
     </div>
-    <div id="p2">
-      <figure>
-        <img class="imgs" src="./images/services-02-480x659.jpg">
-      </figure>
-      <div id="b2">
-      </div>
-      <div class="caption">
-        <div class="title">Заметки души </div>
-        <span class="price">От $45</span>
-        <hr class="divider">
-      </div>
-    </div>
-    <div id="p3">
-      <figure>
-        <img class="imgs" src="./images/services-03-480x659.jpg">
-      </figure>
-      <div id="b3">
-      </div>
-      <div class="caption">
-        <div class="title">Апельсиновое<br>настроение</div>
-        <span class="price">От $35</span>
-        <hr class="divider">
-      </div>
-    </div>
-    <div id="p4">
-      <figure>
-        <img class="imgs" src="./images/services-04-480x659.jpg">
-      </figure>
-      <div id="b4">
-      </div>
-      <div class="caption">
-        <div class="title">В центре внимания</div>
-        <span class="price">От $40</span>
-        <hr class="divider">
-      </div>
-    </div>
-
 
   </section>
-  <section class="person">
-    <div id="about">
+  <section class="person wow fadeInUp" data-wow-duration="3s" data-wow-offset="300">
+    <div id="about" class="wow fadeInUp" data-wow-duration="3s" data-wow-offset="300" data-wow-delay=".2s">
       <h2 id="about_title">Обо мне</h2>
       <h6 id="about_subtitle">Меня зовут Жасмин Майлс и я <br>профессиональный художник из Москвы.</h6>
       <p id="about_article">Я черпаю вдохновение из новых стилей современного и городского искусства, из графики и
@@ -171,7 +176,7 @@
       </div>
       <a class="order" href="#"><span>заказать работу</span></a>
     </div>
-    <div id="bg-smear">
+    <div id="bg-smear" class="">
       <img class="yellow" src="./images/01-482x564.jpg" alt="Jasmine Miles">
     </div>
   </section>
@@ -184,7 +189,7 @@
       <h3>Неповторимые Работы</h3>
     </div>
   </section>
-  <section class="products">
+  <section class="products wow fadeInUp" data-wow-duration="3s" data-wow-offset="300">
     <div class="products_title">
       <h2>Цены</h2>
     </div>
@@ -207,7 +212,7 @@
           </tr>
         </table>
       </div>
-      <div class="p_box products_popart">
+      <div class="p_box products_popart wow fadeInUp" data-wow-duration="3s" data-wow-offset="300" data-wow-delay=".1s">
         <div>ПОП-АРТ</div>
         <hr>
         <table>
@@ -259,7 +264,7 @@
       <img src="./images/grid-gallery-4-370x278.jpg" alt="">
     </figure>
   </section>
-  <section class="comments">
+  <section class="comments sp_box products_popart wow fadeInUp" data-wow-duration="3s" data-wow-offset="300">
     <h2>Отзывы</h2>
     <div class="shell">
       <div class="comments_cards" id="cc">
@@ -421,8 +426,8 @@
         <div class="write">
           <h3>Написать мне</h3>
           <div>
-            <div class="rs">
-              <i class="fas fa-bars"></i>
+            <div class="rs" id="ag">
+              <i class="fas fa-bars" id="three"></i>
               <div id="by" class="first">Выбрать Услугу</div>
               <i id="down" class="fas fa-angle-down icon7"></i>
               <div id="fdd" class="first_dd">
@@ -465,9 +470,44 @@
     </div>
   </section>
 
-
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="/jquery-3.6.0.min.js"></script>
+  <script src="./js/wow.min.js"></script>
   <script>
+    new WOW().init()
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 0,
+      centeredSlides: false,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: false,
+      // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    })
+
+    // window.onresize = start
+    // function start() {
+    //   if (window.innerWidth > 1200) {
+    //     swiper.params.slidesPerView = 4
+    //   }
+    //   if (window.innerWidth <= 1200) {
+    //     console.log(swiper.params.slidesPerView)
+    //     swiper.params.slidesPerView = 2
+    //     console.log(666)
+    //   }
+    // }
+    // start()
+
     a1.onclick = () => {
       if (window.innerWidth < 992) {
         if (ctt1.style.display === "none") {
@@ -560,6 +600,20 @@
         c1.style.visibility = "visible"
         c2.style.visibility = "visible"
         cc.style.marginLeft = "0px"
+        swiper.params.slidesPerView = 4
+      }
+
+      if (window.innerWidth <= 1200) {
+        swiper.params.slidesPerView = 2
+      }
+      if (window.innerWidth <= 992) {
+        swiper.params.slidesPerView = (100 / 45)
+      }
+      // if (window.innerWidth <= 768) {
+      //   swiper.params.slidesPerView = (100/38)
+      // }
+      if (window.innerWidth <= 576) {
+        swiper.params.slidesPerView = (100 / 90)
       }
 
       setTimeout(() => {
@@ -638,7 +692,7 @@
       }
     }
 
-    by.onclick = () => {
+    ag.onclick = () => {
       // fdd.style.display = "block"
       if (fdd.style.display !== "block") {
         fdd.style.display = "block"
