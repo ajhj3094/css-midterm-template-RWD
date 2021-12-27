@@ -18,11 +18,13 @@ html,
 body {
   /* 為了讓 Menu 的 position:sticky 可以下移，先取消此項設置 */
   /* height: 100vh; */
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
 header {
@@ -424,8 +426,8 @@ i.i-right {
 #b3,
 #b4 {
   position: absolute;
-  width: 88%;
-  height: 91%;
+  width: 90%;
+  height: 92%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1386,7 +1388,73 @@ textarea:focus {
   display: none;
 }
 
+.btn {
+  display: none;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none!important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+  color: white;
+  width: 20px;
+  font-size: 1.5rem !important;
+  font-weight: 900;
+}
+
+.swiper-button-next:hover > .swiper-button-next:after,
+.swiper-button-prev:hover > .swiper-button-prev:after {
+  color: #ff8820 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  display:none !important;
+}
+
+#toTop {
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: #ff8820;
+  display: block;
+  position: fixed;
+  right: 40px;
+  z-index: 999999;
+  bottom: -70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .45s all ease-in-out;
+}
+
+#toTop > i {
+  margin: auto;
+  color: white;
+  text-align: center;
+  /* vertical-align: middle; */
+  font-weight: 600;
+}
+
+#toTop:hover {
+  background: #d36200;
+}
+
+#d3, #d4, #d5, #d6 {
+  display: none;
+}
+
 @media (max-width: 1200px) {
+  .quote_top_title {
+    margin-left: 20px;
+    text-align: left;
+}
+  .swiper-button-next, .swiper-button-prev {
+    display:flex !important;
+  }
   .p_box {
     width: 300px;
   }
@@ -1426,7 +1494,7 @@ textarea:focus {
     padding-left: 50px;
   }
   .cards {
-    padding: 40px 40px 20px 40px;
+    padding: 35px 30px 35px 30px;
     /* width: 40%; */
     min-width: 450px;
     left: 480px;
@@ -1465,6 +1533,20 @@ textarea:focus {
 }
 
 @media (max-width: 992px) {
+  .quote_top_title > a {
+    cursor: pointer;
+    transition: 0.3s all ease;
+    font-size: 1.2rem;
+}
+  .quote_top {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
   #ctt3 {
     height: 650px;
   }
@@ -1475,8 +1557,12 @@ textarea:focus {
     padding-right: 160px;
   }
   .cards {
-    min-width: 350px;
+    min-width: 330px;
     left: 380px;
+  }
+  .comments_cards {
+    width: 100%;
+    margin-left: -19px;
   }
   .write .third {
     min-width: 520px;
@@ -2006,9 +2092,41 @@ textarea:focus {
   .footer_body .footer_shell .write {
     margin-left: 0;
   }
+  .shell {
+    max-width: 480px;
+    padding: 0 15px;
+    margin: auto;
+    overflow: hidden;
+    min-width: 300px;
+    padding: 0 38px;
+}
+.comments_cards {
+  width: 1830px;
+  margin-left: 0;
+}
+.cards {
+  left: 0;
+}
+.d {
+  transform:none;
+}
+#d1, #d2 {
+  display: none;
+}
+#d3, #d4, #d5, #d6 {
+  display: block;
+}
+.dots {
+  /* display: none; */
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+}
 }
 
 @media (max-width: 576px) {
+
   .footer_shell {
     padding:0 25px;
 }
@@ -2059,5 +2177,9 @@ textarea:focus {
   .images-xx figure {
     flex: 1 0 100%;
     padding: 0;
+  }
+  #toTop {
+    right: 15px;
+    bottom: 15px;
   }
 }

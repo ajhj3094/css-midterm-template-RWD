@@ -153,11 +153,11 @@
           <hr class="divider">
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
 
+    </div>
+    <div class="swiper-button-next btn"></div>
+    <div class="swiper-button-prev btn"></div>
+    <div class="swiper-pagination btn"></div>
   </section>
   <section class="person wow fadeInUp" data-wow-duration="3s" data-wow-offset="300">
     <div id="about" class="wow fadeInUp" data-wow-duration="3s" data-wow-offset="300" data-wow-delay=".2s">
@@ -183,6 +183,7 @@
       <img class="yellow" src="./images/01-482x564.jpg" alt="Jasmine Miles">
     </div>
   </section>
+  <a href="#" id="toTop"><i class="fas fa-chevron-up"></i></a>
   <section class="video">
     <video autoplay loop muted style="margin:auto;width:100vw">
       <source src="video/video.mp4" type="video/mp4">
@@ -342,9 +343,12 @@
       </div>
     </div>
     <div class="dots">
-      <div class="d" id="d1">
-      </div>
+      <div class="d" id="d1"></div>
       <div class="d" id="d2"></div>
+      <div class="d" id="d3"></div>
+      <div class="d" id="d4"></div>
+      <div class="d" id="d5"></div>
+      <div class="d" id="d6"></div>
     </div>
   </section>
   <section class="footer">
@@ -488,10 +492,10 @@
         delay: 3000,
         disableOnInteraction: false,
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -511,16 +515,22 @@
     // }
     // start()
 
+    // fas fa-angle-down fa-angle-up
+    // fas fa-chevron-down down
+
     a1.onclick = () => {
       if (window.innerWidth < 992) {
         if (ctt1.style.display === "none") {
           ctt1.style.display = "block"
+          i1.classList.add("fa-chevron-up")
         } else {
           ctt1.style.display = "none"
+          i1.classList.remove("fa-chevron-up")
         }
         if (ctt2.style.display === "block" || ctt3.style.display === "block") {
           ctt2.style.display = "none"
           ctt3.style.display = "none"
+          i1.classList.remove("fa-chevron-up")
         }
       }
     }
@@ -528,12 +538,15 @@
       if (window.innerWidth < 992) {
         if (ctt2.style.display === "none") {
           ctt2.style.display = "block"
+          i2.classList.add("fa-chevron-up")
         } else {
           ctt2.style.display = "none"
+          i2.classList.remove("fa-chevron-up")
         }
         if (ctt1.style.display === "block" || ctt3.style.display === "block") {
           ctt1.style.display = "none"
           ctt3.style.display = "none"
+          i2.classList.remove("fa-chevron-up")
         }
       }
     }
@@ -541,23 +554,31 @@
       if (window.innerWidth < 992) {
         if (ctt3.style.display === "none") {
           ctt3.style.display = "block"
+          i3.classList.add("fa-chevron-up")
         } else {
           ctt3.style.display = "none"
+          i3.classList.remove("fa-chevron-up")
         }
         if (ctt2.style.display === "block" || ctt1.style.display === "block") {
           ctt2.style.display = "none"
           ctt1.style.display = "none"
+          i3.classList.remove("fa-chevron-up")
         }
       }
     }
 
     function md() {
-      console.log(window.innerWidth)
+      // console.log(window.innerWidth)
       if (window.innerWidth >= 992) {
         ctt1.style.display = "block"
         ctt2.style.display = "block"
         ctt3.style.display = "block"
       }
+      if (window.innerWidth > 768 && window.innerWidth <= 992) {
+        cc.style.marginLeft = "-19px"
+        console.log(666)
+      }
+
       // if (window.innerWidth < 992) {
       //   a1.onclick = () => {
       //     if (ctt1.style.display === "none") {
@@ -596,6 +617,15 @@
     }
     md()
 
+    window.onscroll = function () {
+      // console.log(window.scrollY)
+      if (window.scrollY >= 600) {
+        toTop.style.bottom = "40px"
+      } else if (window.scrollY < 600) {
+        toTop.style.bottom = "-70px"
+      }
+    }
+
     window.onresize = start
     function start() {
       if (window.innerWidth > 1200) {
@@ -617,6 +647,25 @@
       // }
       if (window.innerWidth <= 576) {
         swiper.params.slidesPerView = (100 / 90)
+      }
+      if (window.innerWidth > 768 && window.innerWidth <= 992) {
+        cc.style.marginLeft = "-19px"
+        // console.log(666)
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+        setTimeout(() => {
+          c3.style.visibility = "hidden"
+          c4.style.visibility = "hidden"
+        }, 200)
+      }
+      if (window.innerWidth > 992 && window.innerWidth <= 1200) {
+        cc.style.marginLeft = "0px"
+        cc.style.marginRight = "0px"
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+      }
+      if (window.innerWidth <= 768) {
+        cc.style.marginLeft = "0px"
       }
 
       setTimeout(() => {
@@ -663,10 +712,25 @@
           }
         }, 0)
       }
+      if (window.innerWidth > 768 && window.innerWidth <= 992) {
+        // if (cc.style.marginRight === "0px") {
+        cc.style.marginRight = "1150px"
+        cc.style.marginLeft = "-739px"
+        // margin-left: -770px
+        c3.style.visibility = "visible"
+        c4.style.visibility = "visible"
+        setTimeout(() => {
+          if (cc.style.marginRight === "1150px") {
+            c1.style.visibility = "hidden"
+            c2.style.visibility = "hidden"
+          }
+        }, 0)
+        // }
+      }
     }
 
     d1.onclick = () => {
-      console.log(window.onresize)
+      // console.log(window.onresize)
       if (window.innerWidth > 1200) {
         cc.style.marginRight = "0px"
         c1.style.visibility = "visible"
@@ -688,6 +752,21 @@
         // cc.style.marginRight = "800px"
         setTimeout(() => {
           if (cc.style.marginLeft === "0px") {
+            c3.style.visibility = "hidden"
+            c4.style.visibility = "hidden"
+          }
+        }, 0)
+      }
+      if (window.innerWidth > 768 && window.innerWidth <= 992) {
+        if (cc.style.marginRight === "1150px") {
+          cc.style.marginRight = "0px"
+          cc.style.marginLeft = "-20px"
+          c1.style.visibility = "visible"
+          c2.style.visibility = "visible"
+        }
+        // cc.style.marginRight = "800px"
+        setTimeout(() => {
+          if (cc.style.marginLeft === "-20px") {
             c3.style.visibility = "hidden"
             c4.style.visibility = "hidden"
           }
