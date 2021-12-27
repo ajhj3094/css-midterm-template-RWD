@@ -1752,7 +1752,6 @@ textarea:focus {
     position: absolute;
     background: white;
     display: block;
-
   }
   .purchase2 {
     display: inline-block;
@@ -2010,6 +2009,29 @@ textarea:focus {
 }
 
 @media (max-width: 576px) {
+  .footer_shell {
+    padding:0 25px;
+}
+  .write .third {
+    width: 100%;
+    min-width:initial;
+    max-width: initial;
+}
+  #calen {
+    width: 100%;
+  }
+  .unit_right {
+    width: 100%;
+  }
+  .footer_body .footer_shell > div {
+    width: 100%;
+}
+  .footer_shell h3 {
+    width: 100%;
+  }
+  .new {
+    width: 100%;
+  }
   #p1,
   #p2,
   #p3,
@@ -2019,6 +2041,7 @@ textarea:focus {
 
   #about {
     width: 100%;
+    padding: 0px 15px;
   }
 
   #bg-smear {
@@ -2036,5 +2059,5 @@ textarea:focus {
   .images-xx figure {
     flex: 1 0 100%;
     padding: 0;
-}
+  }
 }
