@@ -727,6 +727,21 @@
         }, 0)
         // }
       }
+      // if (window.innerWidth <= 768) {
+      //   // if (cc.style.marginRight === "0px") {
+      //   cc.style.marginRight = "1150px"
+      //   cc.style.marginLeft = "-739px"
+      //   // margin-left: -770px
+      //   c3.style.visibility = "visible"
+      //   c4.style.visibility = "visible"
+      //   setTimeout(() => {
+      //     if (cc.style.marginRight === "1150px") {
+      //       c1.style.visibility = "hidden"
+      //       c2.style.visibility = "hidden"
+      //     }
+      //   }, 0)
+      //   // }
+      // }
     }
 
     d1.onclick = () => {
@@ -773,6 +788,113 @@
         }, 0)
       }
     }
+
+    d3.onclick = () => {
+      if (window.innerWidth <= 768) {
+
+        cc.style.marginLeft = "0px"
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+        c3.style.visibility = "visible"
+        c4.style.visibility = "visible"
+        if (cc.style.marginLeft = "0px") {
+          c2.style.visibility = "hidden"
+          c3.style.visibility = "hidden"
+          c4.style.visibility = "hidden"
+        } else {
+          c1.style.visibility = "visible"
+          c2.style.visibility = "visible"
+          c3.style.visibility = "visible"
+          c4.style.visibility = "visible"
+        }
+        setTimeout(() => {
+          if (cc.style.marginLeft === "0px") {
+            c2.style.visibility = "hidden"
+            c3.style.visibility = "hidden"
+            c4.style.visibility = "hidden"
+          }
+        }, 200)
+      }
+    }
+    d4.onclick = () => {
+      if (window.innerWidth <= 768) {
+        cc.style.marginLeft = "-435px"
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+        c3.style.visibility = "visible"
+        c4.style.visibility = "visible"
+        if (cc.style.marginLeft = "-435px") {
+          c1.style.visibility = "hidden"
+          c3.style.visibility = "hidden"
+          c4.style.visibility = "hidden"
+        } else {
+          c1.style.visibility = "visible"
+          c2.style.visibility = "visible"
+          c3.style.visibility = "visible"
+          c4.style.visibility = "visible"
+        }
+        setTimeout(() => {
+          if (cc.style.marginLeft === "-435px") {
+            c1.style.visibility = "hidden"
+            c3.style.visibility = "hidden"
+            c4.style.visibility = "hidden"
+          }
+        }, 200)
+      }
+    }
+    d5.onclick = () => {
+      if (window.innerWidth <= 768) {
+        cc.style.marginLeft = "-918px"
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+        c3.style.visibility = "visible"
+        c4.style.visibility = "visible"
+        if (cc.style.marginLeft = "-918px") {
+          c2.style.visibility = "hidden"
+          c1.style.visibility = "hidden"
+          c4.style.visibility = "hidden"
+        } else {
+          c1.style.visibility = "visible"
+          c2.style.visibility = "visible"
+          c3.style.visibility = "visible"
+          c4.style.visibility = "visible"
+        }
+        setTimeout(() => {
+          if (cc.style.marginLeft === "-918px") {
+            c1.style.visibility = "hidden"
+            c2.style.visibility = "hidden"
+            c4.style.visibility = "hidden"
+          }
+        }, 200)
+      }
+    }
+    d6.onclick = () => {
+      if (window.innerWidth <= 768) {
+        cc.style.marginLeft = "-1398px"
+        c1.style.visibility = "visible"
+        c2.style.visibility = "visible"
+        c3.style.visibility = "visible"
+        c4.style.visibility = "visible"
+        if (cc.style.marginLeft = "-1398px") {
+          c2.style.visibility = "hidden"
+          c3.style.visibility = "hidden"
+          c1.style.visibility = "hidden"
+        } else {
+          c1.style.visibility = "visible"
+          c2.style.visibility = "visible"
+          c3.style.visibility = "visible"
+          c4.style.visibility = "visible"
+        }
+        setTimeout(() => {
+          if (cc.style.marginLeft === "-1398px") {
+            c1.style.visibility = "hidden"
+            c3.style.visibility = "hidden"
+            c2.style.visibility = "hidden"
+          }
+        }, 200)
+      }
+    }
+
 
     ag.onclick = () => {
       // fdd.style.display = "block"
