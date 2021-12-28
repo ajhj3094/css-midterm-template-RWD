@@ -216,7 +216,8 @@
           </tr>
         </table>
       </div>
-      <div class="p_box products_popart wow fadeInUp" data-wow-duration="3s" data-wow-offset="300" data-wow-delay=".05s">
+      <div class="p_box products_popart wow fadeInUp" data-wow-duration="3s" data-wow-offset="300"
+        data-wow-delay=".05s">
         <div>ПОП-АРТ</div>
         <hr>
         <table>
@@ -541,6 +542,8 @@
         if (ctt1.style.display === "none") {
           ctt1.style.display = "block"
           i1.classList.add("fa-chevron-up")
+          i2.classList.remove("fa-chevron-up")
+          i3.classList.remove("fa-chevron-up")
         } else {
           ctt1.style.display = "none"
           i1.classList.remove("fa-chevron-up")
@@ -548,7 +551,7 @@
         if (ctt2.style.display === "block" || ctt3.style.display === "block") {
           ctt2.style.display = "none"
           ctt3.style.display = "none"
-          i1.classList.remove("fa-chevron-up")
+          i1.classList.add("fa-chevron-up")
         }
       }
     }
@@ -557,6 +560,8 @@
         if (ctt2.style.display === "none") {
           ctt2.style.display = "block"
           i2.classList.add("fa-chevron-up")
+          i1.classList.remove("fa-chevron-up")
+          i3.classList.remove("fa-chevron-up")
         } else {
           ctt2.style.display = "none"
           i2.classList.remove("fa-chevron-up")
@@ -564,7 +569,7 @@
         if (ctt1.style.display === "block" || ctt3.style.display === "block") {
           ctt1.style.display = "none"
           ctt3.style.display = "none"
-          i2.classList.remove("fa-chevron-up")
+          i2.classList.add("fa-chevron-up")
         }
       }
     }
@@ -573,6 +578,8 @@
         if (ctt3.style.display === "none") {
           ctt3.style.display = "block"
           i3.classList.add("fa-chevron-up")
+          i2.classList.remove("fa-chevron-up")
+          i1.classList.remove("fa-chevron-up")
         } else {
           ctt3.style.display = "none"
           i3.classList.remove("fa-chevron-up")
@@ -580,7 +587,7 @@
         if (ctt2.style.display === "block" || ctt1.style.display === "block") {
           ctt2.style.display = "none"
           ctt1.style.display = "none"
-          i3.classList.remove("fa-chevron-up")
+          i3.classList.add("fa-chevron-up")
         }
       }
     }
@@ -646,6 +653,9 @@
 
     window.onresize = start
     function start() {
+      i1.classList.remove("fa-chevron-up")
+      i2.classList.remove("fa-chevron-up")
+      i3.classList.remove("fa-chevron-up")
       if (window.innerWidth > 1200) {
         cc.style.marginRight = "0px"
         c1.style.visibility = "visible"
@@ -660,6 +670,11 @@
         swiper.params.slidesPerView = 2
         db1.style.visibility = "visible"
         db2.style.visibility = "hidden"
+      }
+      if (window.innerWidth > 992) {
+        i1.classList.remove("fa-chevron-up")
+        i2.classList.remove("fa-chevron-up")
+        i3.classList.remove("fa-chevron-up")
       }
       if (window.innerWidth <= 992) {
         swiper.params.slidesPerView = (100 / 45)
