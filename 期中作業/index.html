@@ -255,18 +255,40 @@
     </div>
   </section>
   <section class="images-xx">
-    <figure>
-      <img src="./images/grid-gallery-1-370x278.jpg" alt="">
-    </figure>
-    <figure>
-      <img src="./images/grid-gallery-2-370x278.jpg" alt="">
-    </figure>
-    <figure>
-      <img src="./images/grid-gallery-3-370x278.jpg" alt="">
-    </figure>
-    <figure>
-      <img src="./images/grid-gallery-4-370x278.jpg" alt="">
-    </figure>
+    <div class="outer">
+      <div class="mask"></div>
+      <figure>
+        <img src="./images/grid-gallery-1-370x278.jpg" alt="">
+      </figure>
+      <div class="inner"></div>
+      <i class="fas fa-eye inner_icon"></i>
+    </div>
+    <div class="outer">
+      <div class="mask"></div>
+      <figure>
+        <img src="./images/grid-gallery-2-370x278.jpg" alt="">
+      </figure>
+      <div class="inner"></div>
+      <i class="fas fa-eye inner_icon"></i>
+    </div>
+    <div class="outer">
+      <div class="mask"></div>
+      <figure>
+        <img src="./images/grid-gallery-3-370x278.jpg" alt="">
+      </figure>
+      <div class="inner"></div>
+      <i class="fas fa-eye inner_icon"></i>
+
+    </div>
+    <div class="outer">
+      <div class="mask"></div>
+      <figure>
+        <img src="./images/grid-gallery-4-370x278.jpg" alt="">
+      </figure>
+      <div class="inner"></div>
+      <i class="fas fa-eye inner_icon"></i>
+
+    </div>
   </section>
   <section class="comments sp_box products_popart wow fadeInUp" data-wow-duration="3s" data-wow-offset="300">
     <h2>Отзывы</h2>
@@ -343,12 +365,24 @@
       </div>
     </div>
     <div class="dots">
-      <div class="d" id="d1"></div>
-      <div class="d" id="d2"></div>
-      <div class="d" id="d3"></div>
-      <div class="d" id="d4"></div>
-      <div class="d" id="d5"></div>
-      <div class="d" id="d6"></div>
+      <div class="d" id="d1">
+        <div class="dborder" id="db1" style="visibility: visible"></div>
+      </div>
+      <div class="d" id="d2">
+        <div class="dborder" id="db2" style="visibility: hidden"></div>
+      </div>
+      <div class="d" id="d3">
+        <div class="dborder" id="db3" style="visibility: visible"></div>
+      </div>
+      <div class="d" id="d4">
+        <div class="dborder" id="db4" style="visibility: hidden"></div>
+      </div>
+      <div class="d" id="d5">
+        <div class="dborder" id="db5" style="visibility: hidden"></div>
+      </div>
+      <div class="d" id="d6">
+        <div class="dborder" id="db6" style="visibility: hidden"></div>
+      </div>
     </div>
   </section>
   <section class="footer">
@@ -502,22 +536,6 @@
       },
     })
 
-    // window.onresize = start
-    // function start() {
-    //   if (window.innerWidth > 1200) {
-    //     swiper.params.slidesPerView = 4
-    //   }
-    //   if (window.innerWidth <= 1200) {
-    //     console.log(swiper.params.slidesPerView)
-    //     swiper.params.slidesPerView = 2
-    //     console.log(666)
-    //   }
-    // }
-    // start()
-
-    // fas fa-angle-down fa-angle-up
-    // fas fa-chevron-down down
-
     a1.onclick = () => {
       if (window.innerWidth < 992) {
         if (ctt1.style.display === "none") {
@@ -634,10 +652,14 @@
         c2.style.visibility = "visible"
         cc.style.marginLeft = "0px"
         swiper.params.slidesPerView = 4
+        db1.style.visibility = "visible"
+        db2.style.visibility = "hidden"
       }
 
       if (window.innerWidth <= 1200) {
         swiper.params.slidesPerView = 2
+        db1.style.visibility = "visible"
+        db2.style.visibility = "hidden"
       }
       if (window.innerWidth <= 992) {
         swiper.params.slidesPerView = (100 / 45)
@@ -650,6 +672,7 @@
       }
       if (window.innerWidth > 768 && window.innerWidth <= 992) {
         cc.style.marginLeft = "-19px"
+        cc.style.marginRight = "0px"
         // console.log(666)
         c1.style.visibility = "visible"
         c2.style.visibility = "visible"
@@ -666,6 +689,10 @@
       }
       if (window.innerWidth <= 768) {
         cc.style.marginLeft = "0px"
+        db3.style.visibility = "visible"
+        db4.style.visibility = "hidden"
+        db5.style.visibility = "hidden"
+        db6.style.visibility = "hidden"
       }
 
       setTimeout(() => {
@@ -692,6 +719,8 @@
         cc.style.marginLeft = "0px"
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
+        db2.style.visibility = "visible"
+        db1.style.visibility = "hidden"
         setTimeout(() => {
           if (cc.style.marginRight === "1170px") {
             c1.style.visibility = "hidden"
@@ -702,9 +731,10 @@
       if (window.innerWidth > 992 && window.innerWidth <= 1200) {
         cc.style.marginRight = "1150px"
         cc.style.marginLeft = "-770px"
-        // margin-left: -770px
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
+        db2.style.visibility = "visible"
+        db1.style.visibility = "hidden"
         setTimeout(() => {
           if (cc.style.marginRight === "1150px") {
             c1.style.visibility = "hidden"
@@ -713,43 +743,28 @@
         }, 0)
       }
       if (window.innerWidth > 768 && window.innerWidth <= 992) {
-        // if (cc.style.marginRight === "0px") {
         cc.style.marginRight = "1150px"
         cc.style.marginLeft = "-739px"
-        // margin-left: -770px
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
+        db2.style.visibility = "visible"
+        db1.style.visibility = "hidden"
         setTimeout(() => {
           if (cc.style.marginRight === "1150px") {
             c1.style.visibility = "hidden"
             c2.style.visibility = "hidden"
           }
         }, 0)
-        // }
       }
-      // if (window.innerWidth <= 768) {
-      //   // if (cc.style.marginRight === "0px") {
-      //   cc.style.marginRight = "1150px"
-      //   cc.style.marginLeft = "-739px"
-      //   // margin-left: -770px
-      //   c3.style.visibility = "visible"
-      //   c4.style.visibility = "visible"
-      //   setTimeout(() => {
-      //     if (cc.style.marginRight === "1150px") {
-      //       c1.style.visibility = "hidden"
-      //       c2.style.visibility = "hidden"
-      //     }
-      //   }, 0)
-      //   // }
-      // }
     }
 
     d1.onclick = () => {
-      // console.log(window.onresize)
       if (window.innerWidth > 1200) {
         cc.style.marginRight = "0px"
         c1.style.visibility = "visible"
         c2.style.visibility = "visible"
+        db1.style.visibility = "visible"
+        db2.style.visibility = "hidden"
         setTimeout(() => {
           if (cc.style.marginRight === "0px") {
             c3.style.visibility = "hidden"
@@ -764,7 +779,8 @@
           c1.style.visibility = "visible"
           c2.style.visibility = "visible"
         }
-        // cc.style.marginRight = "800px"
+        db1.style.visibility = "visible"
+        db2.style.visibility = "hidden"
         setTimeout(() => {
           if (cc.style.marginLeft === "0px") {
             c3.style.visibility = "hidden"
@@ -779,7 +795,8 @@
           c1.style.visibility = "visible"
           c2.style.visibility = "visible"
         }
-        // cc.style.marginRight = "800px"
+        db1.style.visibility = "visible"
+        db2.style.visibility = "hidden"
         setTimeout(() => {
           if (cc.style.marginLeft === "-20px") {
             c3.style.visibility = "hidden"
@@ -797,23 +814,13 @@
         c2.style.visibility = "visible"
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
-        if (cc.style.marginLeft = "0px") {
-          c2.style.visibility = "hidden"
-          c3.style.visibility = "hidden"
-          c4.style.visibility = "hidden"
-        } else {
-          c1.style.visibility = "visible"
-          c2.style.visibility = "visible"
-          c3.style.visibility = "visible"
-          c4.style.visibility = "visible"
-        }
-        setTimeout(() => {
-          if (cc.style.marginLeft === "0px") {
-            c2.style.visibility = "hidden"
-            c3.style.visibility = "hidden"
-            c4.style.visibility = "hidden"
-          }
-        }, 200)
+        db3.style.visibility = "visible"
+        db4.style.visibility = "hidden"
+        db5.style.visibility = "hidden"
+        db6.style.visibility = "hidden"
+      }
+      if (window.innerWidth <= 478) {
+        cc.style.marginLeft = "0px"
       }
     }
     d4.onclick = () => {
@@ -823,81 +830,50 @@
         c2.style.visibility = "visible"
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
-        if (cc.style.marginLeft = "-435px") {
-          c1.style.visibility = "hidden"
-          c3.style.visibility = "hidden"
-          c4.style.visibility = "hidden"
-        } else {
-          c1.style.visibility = "visible"
-          c2.style.visibility = "visible"
-          c3.style.visibility = "visible"
-          c4.style.visibility = "visible"
-        }
-        setTimeout(() => {
-          if (cc.style.marginLeft === "-435px") {
-            c1.style.visibility = "hidden"
-            c3.style.visibility = "hidden"
-            c4.style.visibility = "hidden"
-          }
-        }, 200)
+        db4.style.visibility = "visible"
+        db3.style.visibility = "hidden"
+        db5.style.visibility = "hidden"
+        db6.style.visibility = "hidden"
+      }
+      if (window.innerWidth <= 478) {
+        cc.style.marginLeft = "-340px"
       }
     }
     d5.onclick = () => {
       if (window.innerWidth <= 768) {
-        cc.style.marginLeft = "-918px"
+        cc.style.marginLeft = "-870px"
         c1.style.visibility = "visible"
         c2.style.visibility = "visible"
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
-        if (cc.style.marginLeft = "-918px") {
-          c2.style.visibility = "hidden"
-          c1.style.visibility = "hidden"
-          c4.style.visibility = "hidden"
-        } else {
-          c1.style.visibility = "visible"
-          c2.style.visibility = "visible"
-          c3.style.visibility = "visible"
-          c4.style.visibility = "visible"
-        }
-        setTimeout(() => {
-          if (cc.style.marginLeft === "-918px") {
-            c1.style.visibility = "hidden"
-            c2.style.visibility = "hidden"
-            c4.style.visibility = "hidden"
-          }
-        }, 200)
+        db5.style.visibility = "visible"
+        db4.style.visibility = "hidden"
+        db3.style.visibility = "hidden"
+        db6.style.visibility = "hidden"
+      }
+      if (window.innerWidth <= 478) {
+        cc.style.marginLeft = "-680px"
       }
     }
     d6.onclick = () => {
       if (window.innerWidth <= 768) {
-        cc.style.marginLeft = "-1398px"
+        cc.style.marginLeft = "-1305px"
         c1.style.visibility = "visible"
         c2.style.visibility = "visible"
         c3.style.visibility = "visible"
         c4.style.visibility = "visible"
-        if (cc.style.marginLeft = "-1398px") {
-          c2.style.visibility = "hidden"
-          c3.style.visibility = "hidden"
-          c1.style.visibility = "hidden"
-        } else {
-          c1.style.visibility = "visible"
-          c2.style.visibility = "visible"
-          c3.style.visibility = "visible"
-          c4.style.visibility = "visible"
-        }
-        setTimeout(() => {
-          if (cc.style.marginLeft === "-1398px") {
-            c1.style.visibility = "hidden"
-            c3.style.visibility = "hidden"
-            c2.style.visibility = "hidden"
-          }
-        }, 200)
+        db6.style.visibility = "visible"
+        db4.style.visibility = "hidden"
+        db5.style.visibility = "hidden"
+        db3.style.visibility = "hidden"
+      }
+      if (window.innerWidth <= 478) {
+        cc.style.marginLeft = "-1020px"
       }
     }
 
 
     ag.onclick = () => {
-      // fdd.style.display = "block"
       if (fdd.style.display !== "block") {
         fdd.style.display = "block"
       } else {
